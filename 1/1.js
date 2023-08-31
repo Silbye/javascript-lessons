@@ -15,4 +15,4 @@
 
 let tempCel = prompt('Enter temperature in celsius');
 let tempFar = (9 / 5) * tempCel + 32;
-alert('Celsius: ' + tempCel + ', Farenheit: ' + tempFar)
+alert('Celsius: ' + tempCel + ', Farenheit: ' + Math.round(tempFar))

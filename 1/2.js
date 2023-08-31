@@ -7,6 +7,6 @@
 Вывести значение переменной admin в консоль.
 */
 
-let name = prompt('Enter your name');
-let admin = name;
+const name = prompt('Enter your name');
+const admin = name;
 console.log(admin);
