@@ -14,17 +14,15 @@
 число 32.
 */
 
-let dayNumber = parseInt(prompt("Enter this day's number"));
-if (dayNumber >= 1 & dayNumber < 32) {
+const dayNumber = Number.parseInt(prompt("Enter this day's number"));
+if ((dayNumber >= 1) & (dayNumber < 32)) {
     if (dayNumber < 11) {
-        alert('Number ' + dayNumber + ' falls into ' + 1 + 'st decade of the month');
-    } else if (dayNumber > 10 & dayNumber < 21) {
-        alert('Number ' + dayNumber + ' falls into ' + 2 + 'nd decade of the month');
-    } else if (dayNumber > 20 & dayNumber < 31) {
-        alert('Number ' + dayNumber + ' falls into ' + 3 + 'rd decade of the month');
-    } else if (dayNumber > 30) {
-        alert('Number ' + dayNumber + ' falls into ' + 4 + 'th decade of the month');
+        alert(`Number ${dayNumber} falls into ${1}st decade of the month`);
+    } else if ((dayNumber > 10) & (dayNumber < 21)) {
+        alert(`Number ${dayNumber} falls into ${2}nd decade of the month`);
+    } else if (dayNumber > 20) {
+        alert(`Number ${dayNumber} falls into ${3}rd decade of the month`);
     }
 } else {
-    alert('Number is incorrect!');
+    alert("Number is incorrect!");
 }

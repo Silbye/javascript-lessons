@@ -23,9 +23,11 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-let num = parseInt(prompt("Enter number"));
-let singles = Math.abs(num % 10); // Берётся модуль числа на случай ввода отрицательного значения
-let tens = Math.abs(Math.trunc(num / 10) % 10);
-let hundreds = Math.abs(Math.trunc(num / 100) % 10);
+const num = Math.abs(Number.parseInt(prompt("Enter number"))); // Берётся модуль числа на случай ввода отрицательного значения
+const singles = num % 10;
+const tens = Math.trunc(num / 10) % 10;
+const hundreds = Math.trunc(num / 100) % 10;
 
-alert("In number " + num + " the amount of hundreds: " + hundreds + ", tens: " + tens + ", singles: " + singles)
+alert(
+    `In number ${num} the amount of hundreds: ${hundreds}, tens: ${tens}, singles: ${singles}`
+);
