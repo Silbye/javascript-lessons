@@ -13,10 +13,10 @@
 в консоль "Одно или более значений некорректно.".
 */
 
-let positive = parseInt(prompt('Enter a positive number'));
-let negative = parseInt(prompt('Enter a negative number'));
-if (positive > 0 & negative < 0) {
-    alert('All values are correct!')
+const positive = Number.parseInt(prompt("Enter a positive number"));
+const negative = Number.parseInt(prompt("Enter a negative number"));
+if ((positive > 0) & (negative < 0)) {
+    alert("All values are correct!");
 } else {
-    console.log('One or more values is incorrect!')
+    console.log("One or more values is incorrect!");
 }
