@@ -10,9 +10,9 @@
 три числа. Проверять их не нужно.
 */
 
-const num1 = Number.parseInt(prompt("Enter first number"));
-const num2 = Number.parseInt(prompt("Enter second number"));
-const num3 = Number.parseInt(prompt("Enter third number"));
+const num1 = Number.parseFloat(prompt("Enter first number"));
+const num2 = Number.parseFloat(prompt("Enter second number"));
+const num3 = Number.parseFloat(prompt("Enter third number"));
 
 function findmax(num1, num2, num3) {
     return Math.max(num1, num2, num3);

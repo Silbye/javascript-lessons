@@ -8,9 +8,9 @@
 */
 
 function cubeNumber(number) {
-    return Math.pow(number, 3);
+    return number ** 3;
 }
 
-const number = prompt("Enter number");
+const number = Number.parseInt(prompt("Enter number"));
 alert(`Cube of number ${number} is ${cubeNumber(number)}`);
 console.log(`Cube of number ${number} is ${cubeNumber(number)}`);

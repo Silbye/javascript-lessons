@@ -18,8 +18,8 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-const number1 = Number.parseInt(prompt("Enter first number"));
-const number2 = Number.parseInt(prompt("Enter second number"));
+const number1 = Number.parseFloat(prompt("Enter first number"));
+const number2 = Number.parseFloat(prompt("Enter second number"));
 
 console.log(
     `Sum of numbers ${number1} and ${number2} is ${sum(number1, number2)}`
@@ -47,17 +47,15 @@ function sum(number1, number2) {
 function divide(number1, number2) {
     if (number1 == number2) {
         return 1;
-    } else {
-        return Math.max(number1, number2) / Math.min(number1, number2);
     }
+    return Math.max(number1, number2) / Math.min(number1, number2);
 }
 
 function substract(number1, number2) {
     if (number1 == number2) {
         return 0;
-    } else {
-        return Math.max(number1, number2) - Math.min(number1, number2);
     }
+    return Math.max(number1, number2) - Math.min(number1, number2);
 }
 
 function multiply(number1, number2) {
