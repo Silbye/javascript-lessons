@@ -16,7 +16,7 @@ if (Number.isNaN(num)) {
     alert(`Your salary after paying taxes is: ${payTaxes(num)}`);
 }
 
-function payTaxes(number) {
-    const tax = (number / 100) * 13;
-    return number - tax;
+function payTaxes(gross) {
+    const tax = (gross / 100) * 13;
+    return (gross - tax).toFixed(2);
 }
