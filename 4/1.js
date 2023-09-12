@@ -13,7 +13,7 @@
 for (let i = 0; i < 11; i++) {
     if (i === 0) {
         console.log(`${i} - is zero`);
-    } else if (i % 2 == 0) {
+    } else if (i % 2 === 0) {
         console.log(`${i} - is even number`);
     } else {
         console.log(`${i} - is uneven number`);
