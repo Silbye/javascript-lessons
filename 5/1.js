@@ -15,7 +15,7 @@ const numbers = {
     key7: 7,
 };
 
-for (const [key, value] of Object.entries(numbers)) {
+for (const value of Object.values(numbers)) {
     if (value >= 3) {
         console.log(value);
     }
