@@ -18,22 +18,22 @@ manager.displayInfo(); // "Name: John Doe, Department: Sales"
 */
 
 class Employee {
-    constructor(name) {
-        this.name = name;
-    }
-    displayInfo() {
-        console.log(`Name: ${this.name}`);
-    }
+  constructor(name) {
+    this.name = name;
+  }
+  displayInfo() {
+    console.log(`Name: ${this.name}`);
+  }
 }
 
 class Manager extends Employee {
-    constructor(name, department) {
-        super(name);
-        this.department = department;
-    }
-    displayInfo() {
-        console.log(`Name: ${this.name}, Department: ${this.department}`);
-    }
+  constructor(name, department) {
+    super(name);
+    this.department = department;
+  }
+  displayInfo() {
+    console.log(`Name: ${this.name}, Department: ${this.department}`);
+  }
 }
 
 const employee = new Employee("John Smith");
@@ -69,28 +69,34 @@ console.log(order.getTotalPrice()); // Вывод: 1100
 */
 
 class Product {
-    constructor(name, price, quantity) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-    }
+  constructor(name, price, quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+  }
 }
 
 class Order {
-    constructor(id, products = []) {
-        this.id = id;
-        this.products = products;
-    }
-    addProduct(product) {
-        this.products.push(product);
-    }
-    getTotalPrice() {
-        let sum = 0;
-        for (const product of this.products) {
-            sum += product.price * product.quantity;
-        }
-        return sum;
-    }
+  constructor(id, products = []) {
+    this.id = id;
+    this.products = products;
+  }
+  addProduct(product) {
+    this.products.push(product);
+  }
+  getTotalPrice() {
+    /*let sum = 0;
+                for (const product of this.products) {
+                    sum += product.price * product.quantity;
+                }
+                */
+
+    let sum = this.products.reduce(
+      (acc, product) => acc + product.price * product.quantity,
+      0
+    );
+    return sum;
+  }
 }
 
 const order = new Order(12345);
